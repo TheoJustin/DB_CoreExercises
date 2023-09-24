@@ -1,0 +1,28 @@
+db.copyDatabase('Project', 'LayarKaca');
+use Project
+db.dropDatabase();
+
+Nosql start -> kalo di pc binus
+
+no 1
+> use LayarKaca
+> show collections
+> db.movies.find()
+> it -> kalo mau view next
+> db.sessions.find()
+> it -> kalo mau view next
+> db.theaters.find()
+> it -> kalo mau view next
+> db.users.find()
+> it -> kalo mau view next
+
+no 2
+
+> db.users.deleteMany({$and: [{name: {$regex : "/in/i"}},{name: {$not : {$regex: "/vinv/"}}}]})
+
+
+no 3
+> db.movies.find({},{genres:0,languages:0, awards:0, imdb:0, 
+countries:0,tomatoes:0,plot:0,runtime:0, lastupdated:0, type:0, year:0, directors:0,
+writers:0
+});
